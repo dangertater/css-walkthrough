@@ -2,9 +2,12 @@ import React from "react"
 import { styled } from "@mui/material/styles"
 import { useTheme } from "@mui/material/styles"
 
-export const Header = styled("header")`
-	background-color: ${({ theme }) => {
-		return theme.color
+let TestHeader = styled("header")`
+	background-color: ${({ theme, backgroundColor = theme.colors.header }) => {
+		return backgroundColor
 	}};
-	padding: 40px 0;
 `
+
+export function Header() {
+	return <TestHeader backgroundColor="red">asdf</TestHeader>
+}
