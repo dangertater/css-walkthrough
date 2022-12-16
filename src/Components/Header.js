@@ -1,15 +1,12 @@
 import React from "react"
-import { styled } from "@mui/material/styles"
-import { useTheme } from "@mui/material/styles"
+import { useTheme, styled } from "@mui/material/styles"
 
-export const Header1 = styled("div")`
+let HeaderStyled = styled("div")`
 	background-color: ${(props) => {
-		return props.backgroundColor
+		return props.theme.palette.primary.main
 	}};
 `
 
 export function Header() {
-	const theme = useTheme()
-	console.log(theme)
-	return <Header1 backgroundColor={theme.palette.primary.main}>asdf</Header1>
+	return <HeaderStyled>new heck</HeaderStyled>
 }
