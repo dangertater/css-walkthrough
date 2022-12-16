@@ -6,7 +6,11 @@ export default function Button(props) {
 	const theme = useTheme()
 	console.log("theme", theme.palette.primary.main)
 	return (
-		<MuiButton variant="contained" color="primary">
+		<MuiButton
+			variant="contained"
+			color="primary"
+			sx={{ "&:hover": { backgroundColor: "red" } }}
+		>
 			asdf
 		</MuiButton>
 	)
