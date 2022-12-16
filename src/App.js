@@ -1,18 +1,19 @@
 import React from "react"
-import { ThemeProvider } from "@mui/material"
+import { ThemeProvider, useTheme, createTheme } from "@mui/material/styles"
 import { Container } from "./Components/Container"
 import { Header } from "./Components/Header"
-import { useTheme } from "@mui/material/styles"
 
-let theme = { colors: "red" }
-// { header: "red", body: "blue", footer: "green" }
 function App() {
+	let theme = createTheme({
+		colors: { header: "red", body: "blue", footer: "green" },
+	})
+
 	return (
 		<ThemeProvider theme={theme}>
 			<>
 				<Header>
 					<h1>heack</h1>
-				</Header>{" "}
+				</Header>
 				<Container>heck</Container>
 			</>
 		</ThemeProvider>
