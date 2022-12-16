@@ -1,11 +1,21 @@
 import React from "react"
-import { Container } from "react-dom"
+import { ThemeProvider } from "@mui/material"
+import { Container } from "./Components/Container"
+import { Header } from "./Components/Header"
+import { useTheme } from "@mui/material/styles"
 
+let theme = { colors: "red" }
+// { header: "red", body: "blue", footer: "green" }
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header"></header>
-		</div>
+		<ThemeProvider theme={theme}>
+			<>
+				<Header>
+					<h1>heack</h1>
+				</Header>{" "}
+				<Container>heck</Container>
+			</>
+		</ThemeProvider>
 	)
 }
 
