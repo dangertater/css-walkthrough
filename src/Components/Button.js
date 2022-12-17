@@ -11,7 +11,7 @@ export default function Button(props) {
 			color="primary"
 			sx={{ "&:hover": { backgroundColor: "red" } }}
 		>
-			asdf
+			Try it for free
 		</MuiButton>
 	)
 }

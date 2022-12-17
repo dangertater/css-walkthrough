@@ -3,9 +3,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles"
 import { Container } from "./Components/Container"
 import Button from "./Components/Button"
 import { Header } from "./Components/Header"
-import Nav from "./Components/Nav"
-// import Logo from "./Components/Logo"
-import Image from "material-ui-image"
+import { Nav } from "./Components/Nav" // import Logo from "./Components/Logo"
+import Image from "mui-image"
 
 function App() {
 	let theme = createTheme({
@@ -14,15 +13,16 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<>
+				{/* why won't thinks diplay if i try to embed them in the below Header */}
 				<Header></Header>
-				<Image></Image>
 				<Container>
 					heck
 					<Nav>
+						{/* q4e idk how to load an image :*( */}
+						<Image src="./Components/logo.svg" />
 						<Button />
 					</Nav>
 				</Container>
-				<Button></Button>
 			</>
 		</ThemeProvider>
 	)
